@@ -1,0 +1,28 @@
+{
+   "browser_action": {
+      "default_icon": "./assets/img/ph_logo.png",
+      "default_title": "Producthunt Helper"
+   },
+   "background": {
+      "scripts": [ "./assets/js/background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "./assets/js/content.js" ],
+      "matches": [
+          "*://*.producthunt.com/*"
+      ]
+   } ],
+   "description": "Helper for producthunt site",
+   "icons": {
+      "128": "./assets/img/ph_logo.png",
+      "48": "./assets/img/ph_logo.png"
+   },
+    "web_accessible_resources": [
+      "assets/img/*"
+    ],
+   "manifest_version": 2,
+   "name": "Producthunt Helper",
+   "permissions": [ "background", "*://*/*", "contextMenus"],
+   "short_name": "PHH",
+   "version": "1.0.0.1"
+}
